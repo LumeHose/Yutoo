@@ -1,0 +1,16 @@
+{
+  "name": "yuto-chat",
+  "version": "1.0.0",
+  "description": "Anonymous text chat application",
+  "main": "server.js",
+  "scripts": {
+  "start": "node server/server.js",
+  "dev": "nodemon server/server.js"
+  },
+  "dependencies": {
+    "ws": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}

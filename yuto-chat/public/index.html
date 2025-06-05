@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuto - Anonymous Text Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Landing Page -->
+        <div id="landing-page" class="page active">
+            <div class="hero">
+                <h1 class="logo">
+                    <span class="logo-letter">Y</span>
+                    <span class="logo-letter">U</span>
+                    <span class="logo-letter">T</span>
+                    <span class="logo-letter">O</span>
+                </h1>
+                <p class="tagline">Anonymous text chat with strangers worldwide</p>
+                <div class="stats">
+                    <div class="stat-box online-count">
+                        <div class="stat-value" id="online-count">0</div>
+                        <div class="stat-label">Online Now</div>
+                    </div>
+                    <div class="stat-box active-chats">
+                        <div class="stat-value" id="active-chats">0</div>
+                        <div class="stat-label">Active Chats</div>
+                    </div>
+                </div>
+                <button id="start-chat" class="glow-button">
+                    Start Chatting
+                    <span class="glow"></span>
+                </button>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🔒</div>
+                        <span>100% Anonymous</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✉️</div>
+                        <span>Text Only</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🚫</div>
+                        <span>No Registration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matching Screen -->
+        <div id="matching-page" class="page">
+            <div class="matching-container">
+                <h2>Finding your match...</h2>
+                <div class="search-animation">
+                    <div class="search-dot"></div>
+                    <div class="search-dot"></div>
+                    <div class="search-dot"></div>
+                </div>
+                <div class="search-info">
+                    <div class="info-item">
+                        <span class="info-label">Searching in:</span>
+                        <span class="info-value" id="search-region">Global</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Time elapsed:</span>
+                        <span class="info-value" id="search-time">0s</span>
+                    </div>
+                </div>
+                <button id="cancel-search" class="cancel-button">
+                    Cancel Search
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-page" class="page">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="connection-status">
+                        <div class="status-dot connected"></div>
+                        <span id="connection-status-text">Connected</span>
+                    </div>
+                    <div class="chat-controls">
+                        <button id="next-stranger" class="control-button next-button">
+                            Next Stranger
+                        </button>
+                        <button id="disconnect-btn" class="control-button disconnect-button">
+                            Disconnect
+                        </button>
+                    </div>
+                </div>
+                <div id="chat-messages" class="chat-messages"></div>
+                <div id="typing-indicator" class="typing-indicator">
+                    <div class="typing-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <span>Stranger is typing...</span>
+                </div>
+                <div class="message-input-container">
+                    <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+                    <button id="send-button" class="send-button">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
